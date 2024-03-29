@@ -1080,35 +1080,26 @@ section {
   opacity: 1;
 }
 
-/* CSS untuk gambar responsif */
+/* Mengatur gambar agar responsif */
 .portfolio-img img {
   max-width: 100%;
   height: auto;
 }
 
-/* Media Query untuk layar berukuran kecil (misalnya smartphone) */
+/* Media Query untuk layar dengan lebar maksimum 768px (misalnya untuk smartphone) */
 @media (max-width: 768px) {
   .portfolio-item {
-    /* Mengatur lebar kolom untuk menyesuaikan layar kecil */
-    width: 100%;
-  }
-}
-
-/* Untuk layar dengan lebar kurang dari atau sama dengan 768px */
-@media (max-width: 768px) {
-  .portfolio {
-    /* Sesuaikan gaya CSS Anda di sini untuk membuatnya responsif */
+    width: 100%; /* Mengatur lebar kolom menjadi 100% agar satu kolom per baris */
+    margin-bottom: 30px; /* Menambahkan ruang antara item portofolio */
   }
 
-  /* Contoh penyesuaian untuk menu portofolio */
   #portfolio-flters {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Mengubah arah tata letak menu filter menjadi vertikal */
+    text-align: center; /* Membuat teks menu filter menjadi rata tengah */
   }
 
   #portfolio-flters li {
-    margin-right: 0;
-    margin-bottom: 10px; /* Mengatur jarak antar item menu */
+    margin-bottom: 10px; /* Menambahkan ruang antara item menu filter */
   }
 }
 
