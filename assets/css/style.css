@@ -1079,6 +1079,21 @@ section {
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
 }
+
+/* CSS untuk gambar responsif */
+.portfolio-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Query untuk layar berukuran kecil (misalnya smartphone) */
+@media (max-width: 768px) {
+  .portfolio-item {
+    /* Mengatur lebar kolom untuk menyesuaikan layar kecil */
+    width: 100%;
+  }
+}
+
 /* Untuk layar dengan lebar kurang dari atau sama dengan 768px */
 @media (max-width: 768px) {
   .portfolio {
