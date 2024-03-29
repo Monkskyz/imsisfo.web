@@ -1053,10 +1053,6 @@ section {
   margin-bottom: 0;
 }
 
-.portfolio .portfolio-info a{
-  background: #18d26e;
-}
-
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
@@ -1083,6 +1079,24 @@ section {
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
 }
+/* Untuk layar dengan lebar kurang dari atau sama dengan 768px */
+@media (max-width: 768px) {
+  .portfolio {
+    /* Sesuaikan gaya CSS Anda di sini untuk membuatnya responsif */
+  }
+
+  /* Contoh penyesuaian untuk menu portofolio */
+  #portfolio-flters {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #portfolio-flters li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Mengatur jarak antar item menu */
+  }
+}
+
 /*--------------------------------------------------------------
 # Artikel
 --------------------------------------------------------------*/
