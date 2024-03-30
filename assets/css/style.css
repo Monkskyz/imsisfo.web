@@ -1096,6 +1096,7 @@ section {
   #portfolio-flters {
     flex-direction: column; /* Mengubah arah tata letak menu filter menjadi vertikal */
     text-align: center; /* Membuat teks menu filter menjadi rata tengah */
+    padding-right: 30px
   }
 
   #portfolio-flters li {
