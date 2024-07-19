@@ -475,26 +475,28 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form onsubmit="emailSend(); reset(); return false;" method="post" role="form" class="php-email-form">
+            <form class="php-email-form"> 
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
               </div>
-              <div class="text-center"><button type="submit" class="btn">Send Message</button></div>
+              <div class="text-center">
+                <button type="submit" class="btn" onclick="sendEmail()">Send Message</button>
+              </div>
             </form>
           </div>
 
@@ -536,8 +538,21 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="assets/js/contact.js"></script>
   <script src="assets/js/main.js"></script>
+   <script>
+    function sendEmail() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+      
+      var body = `Kepada Ikatan Mahasiswa Sistem Informasi \n\nPerkenalkan, saya ${name}\n\nEmail Saya : (${email})\n\nPesan Saya : ${message}`;
+      
+      var mailtoLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=imsisfoitbadjkt@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      window.open(mailtoLink, '_blank');
+    }
+  </script>
   
 </body>
 
